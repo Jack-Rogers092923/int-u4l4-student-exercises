@@ -9,14 +9,35 @@ button.addEventListener("click", function() {
 
     // CODE ALONG
     // 1. Write an if statement that would display the california message if a user says they're from "California".
-    
+    if (state === "California") {
+        californiaMessage.style.display = "block";
+        illinoisMessage.style.display = "none";
+        newyorkMessage.style.display = "none";
+        other.style.display = "none";
+    }
     // CODE SOLO
     // 2. Write an else if statement that would display the illinois message if a user says they're from "Illinois".
-    
+    if (state === "Illinois")
+    {
+        californiaMessage.style.display = "none";
+        illinoisMessage.style.display = "block";
+        newyorkMessage.style.display = "none";
+        other.style.display = "none";
+    }
     // 3. Write an else if statement that would display the new york message if a user says they're from "New York".
-    
+    if (state === "New York") {
+        californiaMessage.style.display = "none";
+        illinoisMessage.style.display = "none";
+        newyorkMessage.style.display = "block";
+        other.style.display = "none";
+    }
     // 4. Write an else statement that displays the other message if the user types in a different state.
-
+if (state !== "California" && state !== "Illinois" && state !== "New York") {
+        californiaMessage.style.display = "none";
+        illinoisMessage.style.display = "none";
+        newyorkMessage.style.display = "none";
+        other.style.display = "block";
+    }
 
 });
 
